@@ -24,6 +24,7 @@
 		B340D8C41A9D033F003194FD /* SATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B340D8C31A9D033F003194FD /* SATableViewController.m */; };
 		B340D8C71A9D040F003194FD /* SATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B340D8C61A9D040F003194FD /* SATableViewCell.m */; };
 		B340D8CA1A9D0496003194FD /* SATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B340D8C91A9D0496003194FD /* SATableView.m */; };
+		B340D8D01A9D166E003194FD /* SwipeableData.m in Sources */ = {isa = PBXBuildFile; fileRef = B340D8CF1A9D166E003194FD /* SwipeableData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		B340D8C61A9D040F003194FD /* SATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATableViewCell.m; sourceTree = "<group>"; };
 		B340D8C81A9D0496003194FD /* SATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATableView.h; sourceTree = "<group>"; };
 		B340D8C91A9D0496003194FD /* SATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATableView.m; sourceTree = "<group>"; };
+		B340D8CE1A9D166E003194FD /* SwipeableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeableData.h; sourceTree = "<group>"; };
+		B340D8CF1A9D166E003194FD /* SwipeableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeableData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				B340D89C1A9D02E5003194FD /* AppDelegate.h */,
 				B340D89D1A9D02E5003194FD /* AppDelegate.m */,
 				B340D89F1A9D02E5003194FD /* Main.storyboard */,
+				B340D8CE1A9D166E003194FD /* SwipeableData.h */,
+				B340D8CF1A9D166E003194FD /* SwipeableData.m */,
 				B340D8C21A9D033F003194FD /* SATableViewController.h */,
 				B340D8C31A9D033F003194FD /* SATableViewController.m */,
 				B340D8C81A9D0496003194FD /* SATableView.h */,
@@ -268,6 +273,7 @@
 				B340D8CA1A9D0496003194FD /* SATableView.m in Sources */,
 				B340D8C41A9D033F003194FD /* SATableViewController.m in Sources */,
 				B340D8C71A9D040F003194FD /* SATableViewCell.m in Sources */,
+				B340D8D01A9D166E003194FD /* SwipeableData.m in Sources */,
 				B340D89E1A9D02E5003194FD /* AppDelegate.m in Sources */,
 				B340D89A1A9D02E5003194FD /* main.m in Sources */,
 			);

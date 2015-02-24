@@ -7,13 +7,18 @@
 //
 
 #import "SATableViewController.h"
+#import "SATableViewCell.h"
+#import "SATableView.h"
 
 @interface SATableViewController ()
 
 @end
 
 @implementation SATableViewController
+{
 
+    NSMutableDictionary *dataInfo;
+}
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -23,15 +28,17 @@
     return self;
 }
 
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+   dataInfo = [NSMutableDictionary dictionaryWithCapacity:2];
+    [dataInfo setObject:@"value1" forKey:@"key1"];
+    [dataInfo setObject:@"value2" forKey:@"key2"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,30 +49,29 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(SATableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+
+    return 5;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (SATableViewCell *)tableView:(SATableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    SATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"CellIdentifier" ];
+     cell.title.text = @"Jonathan Ive";
+    cell.summary.text =@"I can't beleive what people are saying about iOS7 icons!";
     
-    // Configure the cell...
+    
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
