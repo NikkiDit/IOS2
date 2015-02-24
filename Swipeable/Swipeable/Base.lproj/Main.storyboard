@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Table View Controller - Messages-->
         <scene sceneID="sQg-Px-vA6">
             <objects>
                 <tableViewController id="ihd-nu-ySt" customClass="SATableViewController" sceneMemberID="viewController">
@@ -37,12 +37,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.048678194518704365" blue="0.055816293484485247" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Delete">
+                                                <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="buttonDelete" destination="Hey-23-BUc" id="84u-7I-UbV"/>
                                     <outlet property="summary" destination="Zgm-sn-qxy" id="ggp-nd-rtX"/>
                                     <outlet property="title" destination="AYp-Wh-ebW" id="DyU-8f-JxA"/>
                                 </connections>
@@ -53,7 +55,9 @@
                             <outlet property="delegate" destination="ihd-nu-ySt" id="AtZ-1j-c9x"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8hJ-T3-dWh"/>
+                    <navigationItem key="navigationItem" title="Messages" id="8hJ-T3-dWh">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="zmo-Mz-FcV"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOG-FZ-Aw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

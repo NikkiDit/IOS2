@@ -11,5 +11,6 @@
 @interface SATableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
+@property (weak, nonatomic) IBOutlet UIButton *buttonDelete;
 
 @end
