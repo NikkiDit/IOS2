@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SATableViewController : UITableViewController
+@property(strong)NSMutableArray *dataInfo;
 
 @end

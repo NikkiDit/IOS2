@@ -9,16 +9,17 @@
 #import "SATableViewController.h"
 #import "SATableViewCell.h"
 #import "SATableView.h"
+#import "SwipeableData.h"
+
 
 @interface SATableViewController ()
 
 @end
 
 @implementation SATableViewController
-{
 
-    NSMutableDictionary *dataInfo;
-}
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -35,12 +36,7 @@
 {
     [super viewDidLoad];
     
-   dataInfo = [NSMutableDictionary dictionaryWithCapacity:2];
-    [dataInfo setObject:@"value1" forKey:@"key1"];
-    [dataInfo setObject:@"value2" forKey:@"key2"];
-    
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -57,17 +53,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 5;
+    return _dataInfo.count;
 }
 
 
 - (SATableViewCell *)tableView:(SATableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"CellIdentifier" ];
-     cell.title.text = @"Jonathan Ive";
-    cell.summary.text =@"I can't beleive what people are saying about iOS7 icons!";
     
-    
+    SwipeableData *list = [self.dataInfo objectAtIndex:indexPath.row];
+    cell.title.text =list.title;
+    cell.summary.text =list.summary;
     
     return cell;
 }

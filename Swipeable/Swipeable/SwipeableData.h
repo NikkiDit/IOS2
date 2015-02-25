@@ -12,4 +12,6 @@
 @property (nonatomic, copy)NSString *title;
 @property (nonatomic,copy) NSString *summary;
 
+-(id)initwithTitle:(NSString *)title summmary: (NSString *)summary;
+
 @end

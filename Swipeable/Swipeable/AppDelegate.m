@@ -7,12 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "SwipeableData.h"
+#import "SATableViewController.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    SwipeableData *list1 = [[SwipeableData alloc]initwithTitle:@"Jonathan Ive" summmary:@"I can't believe what people are saying about those iOS 7 icons! Are they missing alumininium"];
+                            
+    SwipeableData *list2 = [[SwipeableData alloc]initwithTitle:@"Phil Schiller" summmary:@"Thanks ! I am letting my hair grow a bit longer this summer. "];
+    
+    SwipeableData *list3 = [[SwipeableData alloc]initwithTitle:@"Tim Cook" summmary:@"Haha, yeah. I just love mocking the competition "];
+    
+    SwipeableData *list4 = [[SwipeableData alloc]initwithTitle:@"Craig Federighi" summmary:@"I know, I am using 5 screens on my Mac now, I love that feature! "];
+    
+    SwipeableData *list5 = [[SwipeableData alloc]initwithTitle:@"Peter Openheimer" summmary:@"Honeestly, I am not worried, the syock will bounce back... "];
+    
+    SwipeableData *list6 = [[SwipeableData alloc]initwithTitle:@"Scott Forstall" summmary:@"Hey, why are you not responding to my messages?? "];
+    
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:list1,list2,list3,list4,list5, list6, nil];
+    
+    UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+   SATableViewController  *saController = [navController.viewControllers objectAtIndex:0];
+    saController.dataInfo   = list;
+    
     return YES;
 }
 							

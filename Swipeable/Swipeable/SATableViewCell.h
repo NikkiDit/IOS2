@@ -13,4 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 @property (weak, nonatomic) IBOutlet UIButton *buttonDelete;
 
+
+- (IBAction)buttonDeletePressed:(id)sender;
+
 @end
